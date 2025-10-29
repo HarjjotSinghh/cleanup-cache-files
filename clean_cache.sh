@@ -13,10 +13,10 @@ TARGET_DIR="${1:-.}"
 
 # Optional dry run mode
 DRY_RUN=false
-if [[ "$1" == "--dry-run" ]]; then
+if [[ "${1:-}" == "--dry-run" ]]; then
 	DRY_RUN=true
 	TARGET_DIR="${2:-.}"
-elif [[ "$2" == "--dry-run" ]]; then
+elif [[ "${2:-}" == "--dry-run" ]]; then
 	DRY_RUN=true
 fi
 
